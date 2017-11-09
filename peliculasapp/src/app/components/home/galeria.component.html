@@ -1,0 +1,61 @@
+<div class="container main-container">
+<h2>{{ titulo }}</h2>
+<hr>
+
+<!-- Se pregunta si hay peliculas porque es una peticion asincrona -->
+<div class="row" *ngIf="peliculas">
+
+  <div class="col-md-6">
+
+    <div class="row">
+      <!-- Llamada a un pipe desde un ngstyle -->
+      <!-- La clase puntero hace que aparezca la mano al pasar por arriba del div -->
+      <div class="col-md-12 div-pic-1 puntero"
+            [routerLink] = "['/movie', peliculas[0].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[0] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[0].title }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero"
+            [routerLink] = "['/movie', peliculas[1].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[1] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[1].title }}</p>
+      </div>
+      <div class="col-sm-6 div-pic-2 puntero"
+            [routerLink] = "['/movie', peliculas[2].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[2] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[2].title }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6">
+
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero"
+            [routerLink] = "['/movie', peliculas[3].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[3] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[3].title }}</p>
+      </div>
+      <div class="col-sm-6 div-pic-2 puntero"
+            [routerLink] = "['/movie', peliculas[4].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[4] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[4].title }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 div-pic-1 puntero"
+            [routerLink] = "['/movie', peliculas[5].id]"
+            [ngStyle]="{'background-image': 'url( '+ ( peliculas[5] | movieImg ) +' )'}">
+            <p class="pic-titulo">{{ peliculas[5].title }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">PeliculasApp</h1>
+    <p class="lead">Esta es una app de pelicula!</p>
+  </div>
+  </div>
+
+  <!-- Se llama 3 veces al componente galeria pasandole los 3 arreglos como parametros. -->
+  <app-galeria [peliculas]="top_movies" titulo="Top Peliculas"></app-galeria>
+  <app-galeria [peliculas]="cartelera" titulo="Cartelera"></app-galeria>
+  <app-galeria [peliculas]="movies_kids" titulo="Top Peliculas para Chicos"></app-galeria>
